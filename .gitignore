@@ -1,0 +1,13 @@
+# Arquivos compilados
+/bin/
+*.class
+
+# VS Code configs
+/.vscode/
+
+# Bibliotecas externas
+/lib/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db

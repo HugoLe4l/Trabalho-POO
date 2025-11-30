@@ -43,6 +43,6 @@ public class Operacao {
         if(tipo == "MANUAL"){
             COLOR = YELLOW;
         }
-        return "ID: "+id+" | "+COLOR+" "+textoFormatado+" "+RESET+" |";
+        return "ID: "+id+" | "+COLOR+" "+textoFormatado+" "+RESET+" ";
     }
 }

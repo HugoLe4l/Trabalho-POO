@@ -26,7 +26,12 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "ID: " + id + " | Nome: " + nome + " | E-mail: " + email;
+        int espacosNome = Math.max(0, 25 - nome.length());
+        String nomeFormatado = nome+" ".repeat(espacosNome);
+
+        
+
+        return "ID: " + id + " | Nome: " + nomeFormatado + " | E-mail: " + email;
     }
 
     
