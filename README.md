@@ -40,14 +40,14 @@ javac -d bin src/app/App.java
 3. Execute o programa:
 java -cp bin app.App
 
-```
 
+```
 
 ## 🧱 Estruturas de Dados Utilizadas
 
 O sistema foi desenvolvido para demonstrar o uso prático de **Fila**, **Pilha**, **Lista** e **Árvore Binária**, cada uma aplicada em um módulo do menu principal.
 
-
+---
 
 ### 🔹 1. Fila de Chamados
 
@@ -59,6 +59,7 @@ Estrutura usada: **Queue (Fila)**
 
 A fila simula um atendimento real, o primeiro que chega é o primeiro que sai.
 
+---
 
 ### 🔹 2. Pilha de Operações
 
@@ -70,6 +71,7 @@ Estrutura usada: **Stack (Pilha)**
 
 A pilha funciona como um histórico, armazena toda as ações realizadas pelas outras funções.
 
+---
 
 ### 🔹 3. Lista de Clientes
 
