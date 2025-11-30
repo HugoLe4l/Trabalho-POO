@@ -10,9 +10,9 @@ public class MenuPrincipal {
             Util.titulo("MENU PRINCIPAL");
             System.out.println("-> Escolha o que deseja fazer.");
             System.out.println(
-                    "1.Gerenciar Fila de Chamados. ( Concluido )\n" +
-                            "2.Gerenciar Pilha de Operações. ( Concluido )\n" +
-                            "3.Gerenciar Lista de Clientes. ( Concluido )\n" +
+                    "1.Gerenciar Fila de Chamados.\n" +
+                            "2.Gerenciar Pilha de Operações.\n" +
+                            "3.Gerenciar Lista de Clientes.\n" +
                             "4.Gerenciar Árvore de Serviços.\n" +
                             "5.Sair");
             System.out.print("Digite: ");
