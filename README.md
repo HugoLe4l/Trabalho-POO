@@ -33,8 +33,9 @@ src/
        └── Util.java   (métodos estáticos de apoio, como notificações e modelos de titulos)
 
 
-2. Compile o projeto pelo terminal:
-javac -d bin src/app/App.java
+2. Compile o projeto pelo PowerShell:
+javac -d bin (Get-ChildItem -Recurse -Include *.java).FullName
+
 
 
 3. Execute o programa:
