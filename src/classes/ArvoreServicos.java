@@ -19,17 +19,24 @@ public class ArvoreServicos {
     }
 
     private NoServico inserirServico(NoServico raizAtual, Servico servico) {
+
+        //Se o nó da raiz for nulo cria um novo nó com o serviço fornecido.
         if (raizAtual == null) {
             /* System.out.println("Raiz vazia, criando uma raiz com valor " + servico.getCodigo()); */
             return new NoServico(servico);
         }
 
+
         int codigoServico = servico.getCodigo();
 
+        //Verifica se codigoServico é menor que o codigo da raizAtual. Caso seja menor adiciona no NÓ da esquerda
         if (codigoServico < raizAtual.servico.getCodigo()) {
             /* System.out.println("CodigoSerivco [ " + codigoServico + "] é menor que Raiz [ "+ raizAtual.servico.getCodigo() + " ] COLOCANDO NA ESQUERDA"); */
+
+            //Casso o no ainda não tenha um valor em raizAtual.esquerda, vai ser igual a null.
             raizAtual.esquerda = inserirServico(raizAtual.esquerda, servico);
 
+        //Se for maior que o codigo de raizAtual adiciona na direita.
         } else if (codigoServico > raizAtual.servico.getCodigo()) {
             /* System.out.println("CodigoSerivco [ " + codigoServico + "] é maior que Raiz [ "+ raizAtual.servico.getCodigo() + " ] COLOCANDO NA DIREITA"); */
             raizAtual.direita = inserirServico(raizAtual.direita, servico);
@@ -48,8 +55,11 @@ public class ArvoreServicos {
     private NoServico buscarRec(NoServico atual, int codigo) {
         if (atual == null)
             return null;
+        //Se o codigo fornecido for igual a o codigo do NÓ atual retorna o atual.
         if (codigo == atual.servico.getCodigo())
             return atual;
+
+        //Se menor, verifica passa como parametro do metodo buscarRec() o atual.esquerda do atual e o codigo fornecido.
         else if (codigo < atual.servico.getCodigo())
             return buscarRec(atual.esquerda, codigo);
         else

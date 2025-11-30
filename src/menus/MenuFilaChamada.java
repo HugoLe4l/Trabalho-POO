@@ -32,7 +32,7 @@ public class MenuFilaChamada {
                     atenderProximoFila();
                     break;
                 case 3:
-                    listarFilaDeEspera();
+                    listarFilaDeChamada();
                     break;
                 case 4:
                     break;
@@ -96,10 +96,10 @@ public class MenuFilaChamada {
         System.out.println("Tamanho da fila: " + App.filaChamados.size());
     }
 
-    private static void listarFilaDeEspera() {
-        Util.subTitulo("Exibir lista de espera");
+    private static void listarFilaDeChamada() {
+        Util.subTitulo("Exibir lista de chamada");
         if (App.filaChamados.isEmpty()) {
-            Util.notificacao("Negativo", "Fila de Espera está vazia");
+            Util.notificacao("Negativo", "Fila de chamada está vazia.");
             return;
         }
         for (Chamado fila : App.filaChamados) {

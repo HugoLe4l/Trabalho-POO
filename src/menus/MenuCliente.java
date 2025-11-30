@@ -120,13 +120,14 @@ public class MenuCliente {
             if (App.listaClientes.get(i).getId() == id) {
                 encontrado = true;
 
-                App.listaClientes.remove(i);
                 Util.notificacao("Positivo", "Cliente com ID [Id: " + App.listaClientes.get(i).getId() + " | Nome: "
                         + App.listaClientes.get(i).getNome() + "] foi deletado.");
 
                 Operacao novOperacao = new Operacao("DELETE", "Cliente com ID [Id: " + App.listaClientes.get(i).getId()
                         + " | Nome: " + App.listaClientes.get(i).getNome() + "] foi deletado.");
                 MenuOperacoes.registraOperacoes(novOperacao);
+                App.listaClientes.remove(i);
+
 
                 break;
 

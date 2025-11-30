@@ -56,7 +56,11 @@ public class MenuArvoreServicos {
 
         System.out.print("Descrição do Serviço: ");
         String DescricaoServico = sc.nextLine();
+
+        //Criando o objeto serviço com os dados informados
         Servico novoServico = new Servico(codigo, nomeServico, DescricaoServico);
+
+        //Insere o serviço criado na arvore de serviços
         App.arvoreServicos.inserir(novoServico);
         
 
